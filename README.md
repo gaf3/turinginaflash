@@ -4,7 +4,9 @@ This is just the web site for [here](https://www.turinginaflash.com)
 
 ## Run locally
 
-Make sure you have docker installed and then
+(Note: only tested this on a Mac)
+
+Make sure you have [Docker](https://www.docker.com/products/docker-desktop) installed and then
 
 `docker-compose up`
 
