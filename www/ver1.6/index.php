@@ -2,19 +2,10 @@
 
   session_start();
 
-  if (ereg('Opera(/| )([0-9].[0-9]{1,2})', $_SERVER['HTTP_USER_AGENT'], $log_version))
+  if (preg_match('/Opera/', $_SERVER['HTTP_USER_AGENT'], $log_version))
     $browser = 'OPERA';
-  else if (ereg('MSIE ([0-9].[0-9]{1,2})', $_SERVER['HTTP_USER_AGENT'], $log_version))
+  else if (preg_match('/MSIE ([0-9].[0-9]{1,2})/', $_SERVER['HTTP_USER_AGENT'], $log_version))
     $browser = 'IE';
-  else if (ereg('OmniWeb/([0-9].[0-9]{1,2})', $_SERVER['HTTP_USER_AGENT'], $log_version))
-    $browser = 'OMNIWEB';
-  else if (ereg('(Konqueror/)(.*)(;)', $_SERVER['HTTP_USER_AGENT'], $log_version))
-    $browser = 'KONQUEROR';
-  else if (ereg('Mozilla/([0-9].[0-9]{1,2})', $_SERVER['HTTP_USER_AGENT'], $log_version)
-        && ereg('Safari/([0-9]*)', $_SERVER['HTTP_USER_AGENT'], $log_version2))
-    $browser = 'SAFARI';
-  else if (ereg('Mozilla/([0-9].[0-9]{1,2})', $_SERVER['HTTP_USER_AGENT'], $log_version))
-    $browser = 'MOZILLA';
   else
     $browser = 'OTHER';
 

@@ -10,4 +10,4 @@ Make sure you have [Docker](https://www.docker.com/products/docker-desktop) inst
 
 `docker-compose up`
 
-You can access the site at http:/127.0.0.1:8470/
+You can access the site at http:/127.0.0.1:8470/ and http:/127.0.0.1:8470/ver1.6/
